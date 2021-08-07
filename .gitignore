@@ -1,1 +1,4 @@
-notes/
+notes/*
+
+# 仮想環境
+.venv
