@@ -11,8 +11,19 @@ def get_note_title(note_name):
 
 
 def get_note_body(note_name):
-    with open(path.NOTES / note_name, mode="r") as f:
+    with open(path.NOTES / note_name, mode="r", encoding="utf8") as f:
         text = f.read()
-    md = markdown.Markdown()
+    # extension は次を参照
+    # https://facelessuser.github.io/pymdown-extensions/
+    md = markdown.Markdown(
+        extensions=[
+            "pymdownx.superfences",
+            "pymdownx.inlinehilite",
+            "pymdownx.highlight",
+            "pymdownx.tasklist",
+            "tables",
+        ]
+    )
+    # md = markdown.Markdown()
     body_html = md.convert(text)
     return body_html
