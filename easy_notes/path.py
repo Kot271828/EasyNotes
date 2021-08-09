@@ -1,5 +1,4 @@
 from pathlib import Path
 
-ROOT = Path('.')
+ROOT = Path(".")
 NOTES = ROOT / "notes"
-
