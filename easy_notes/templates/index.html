@@ -2,13 +2,12 @@
 <html>
     <head>
         <title>EasyNotes</title>
-
     </head>
     <body>
         <ol>
             {% for note in all_notes['notes'] %}
             <li > 
-                <a href={{note}}> {{ note.name}} </a>
+                <a href={{note}}>{{ note.name }}</a>
             </li>
             {%endfor %}
         </ol>
